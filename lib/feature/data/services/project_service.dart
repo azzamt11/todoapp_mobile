@@ -22,7 +22,7 @@ abstract class ProjectService extends ChopperService {
   Future<Response<Project>> createProject(@Body() ProjectManipulation item);
 
   @Put(path: '{title}')
-  Future<Response> updateProject(@Path() String title, @Body() Project item);
+  Future<Response> updateProject(@Path() String title, @Body() ProjectManipulation item);
 
   @Delete(path: '{title}')
   Future<Response> deleteProject(@Path() String title);
